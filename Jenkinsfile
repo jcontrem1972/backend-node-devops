@@ -47,6 +47,7 @@ pipeline {
                 script {
                     docker.withRegistry("https://index.docker.io/v1/","id-credencial-jenkins"){
                         sh 'docker push juanma1972/backend-node'
+
                     }
                 }
             }
