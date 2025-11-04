@@ -48,6 +48,7 @@ pipeline {
                 script {
                     docker.withRegistry("https://index.docker.io/v1/","id-crendecial-jenkins"){
                         sh 'docker push juanma1972/backend-node'
+                        sh "docker push juanma1972/backend-node:${env.BUILD_NUMBER}"
 
                     }
                 }
