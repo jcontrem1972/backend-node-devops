@@ -45,7 +45,7 @@ pipeline {
                sh 'docker build -t backend-node .'
                sh 'docker tag backend-node juanma1972/backend-node'
                 script {
-                    docker.withRegistry("https://index.docker.io/v1/","id-credencial-jenkins"){
+                    docker.withRegistry("https://index.docker.io/v1/","id-crendecial-jenkins"){
                         sh 'docker push juanma1972/backend-node'
 
                     }
